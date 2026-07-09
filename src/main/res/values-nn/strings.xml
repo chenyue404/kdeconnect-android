@@ -70,6 +70,7 @@
   <string name="mousepad_scroll_sensitivity_title">Rullefølsemd</string>
   <string name="gyro_mouse_enabled_title">Slå på gyromus</string>
   <string name="gyro_mouse_sensitivity_title">Gyroskop-følsemd</string>
+  <string name="bigscreen_hide_mouse_input">Gøym knapp for mus- og tastaturbruk på ekstern eining</string>
   <string name="bigscreen_show_home_title">Vis heim-knapp</string>
   <string name="bigscreen_show_back_title">Vis tilbake-knapp</string>
   <string-array name="mousepad_tap_entries">
@@ -205,6 +206,7 @@
   <string name="share_to">Del til …</string>
   <string name="unreachable_device_dynamic_shortcut">%s (✕)</string>
   <string name="unreachable_device_url_share_text">Adresser delte til ei utilgjengeleg eining vert leverte når eininga vert tilgjengeleg att.\n\n</string>
+  <string name="unreachable_share_toast">Nettadressa vert delt neste gong eininga vert kopla til.</string>
   <string name="protocol_version">Protokollversjon:</string>
   <string name="protocol_version_newer">Denne eininga brukar ein nyare protokollversjon</string>
   <string name="plugin_settings_with_name">%s-innstillingar</string>
@@ -214,6 +216,7 @@
   <string name="custom_devices_settings_summary">%d lagde til manuelt</string>
   <string name="custom_device_list">Legg til eining basert på IP</string>
   <string name="custom_device_deleted">Tilpassa eining er sletta</string>
+  <string name="custom_device_list_help">Viss eininga ikkje vert funnen automatisk, kan du leggja til IP-adressa eller vertsnamnet til eininga ved å trykka på knappen nedanfor</string>
   <string name="custom_device_fab_hint">Legg til eining</string>
   <string name="undo">Angra</string>
   <string name="share_notification_preference">Lydvarsling</string>
@@ -248,6 +251,10 @@
   <string name="use_digitizer">Bruk som teikneplate</string>
   <string name="digitizer_draw_button">Teikn med fingeren</string>
   <string name="digitizer_preference_title_hide_draw_button">Gøym teikneknapp</string>
+  <string name="digitizer_preference_summary_hide_draw_button">Gøymer heilt teikne­knappen, slik at teikning med fingeren ikkje vert mogleg. Berre slå på dette dersom eininga støttar digitalpenn.</string>
+  <string name="digitizer_preference_title_draw_button_side">Side av «Teikn med finger»-knapp</string>
+  <string name="digitizer_preference_title_enable_exit_fullscreen_gesture">Slå på fingerrørsle for fullskjerms­avslutting</string>
+  <string name="digitizer_preference_summary_enable_exit_fullscreen_gesture">Viss det er kryssa av her, kan du avslutta fullskjerms­modus ved å trykkja og halda fast fingeren på teikneområdet.</string>
   <string-array name="digitizer_preference_entries_draw_button_side">
     <item>Oppe til venstre</item>
     <item>Oppe til høgre</item>
@@ -332,6 +339,7 @@
   <string name="settings_rename">Einingsnamn</string>
   <string name="settings_dark_mode">Mørkt tema</string>
   <string name="settings_export_logs">Eksporter KDE Connect-loggar</string>
+  <string name="settings_export_logs_text">Generer ei fil med køyre­informasjon som kan brukast til å feilsøkja problem.</string>
   <string name="settings_more_settings_title">Fleire innstillingar</string>
   <string name="settings_more_settings_text">Innstillingar for einskildeiningar finn du under «Programtillegg-oppsett» på kvar eining.</string>
   <string name="setting_persistent_notification">Vis evigvarande varsling</string>
@@ -343,6 +351,7 @@
   <string name="block_contents">Blokker varslingsinnhald</string>
   <string name="block_images">Blokker bilete i varslingar</string>
   <string name="notification_channel_receivenotification">Varslingar frå andre einingar</string>
+  <string name="findmyphone_preference_title_flashlight">Blink med lommelykta</string>
   <string name="no_app_for_opening">Fann ikkje nokon app som kan opna denne fila</string>
   <string name="remote_keyboard_service">KDE Connect fjerntastatur</string>
   <string name="presenter_pointer">Peikar</string>
@@ -352,6 +361,7 @@
   <string name="empty_trusted_networks_list_text">Du har ikkje lagt til eit tiltrudd nettverk enno</string>
   <string name="allow_all_networks_text">Tillat alle</string>
   <string name="location_permission_needed_title">Krev utvida løyve</string>
+  <string name="bluetooth_permission_needed_desc">KDE Connect treng løyve til å kopla til nærliggjande einingar for å kunna para med einingar via Bluetooth.</string>
   <string name="location_permission_needed_desc">KDE Connect treng bakgrunns­løyve til sjå den geografiske posisjonen din. Det er for å kunna veta kva Wi-Fi-nettverk du er kopla til sjølv når appen er i bakgrunnen. Ein treng dette løyvet fordi namna på Wi-Fi-nettverk rundt deg òg kan brukast til å finna posisjonen din, sjølv om dette ikkje er det KDE Connect gjer.</string>
   <string name="clipboard_android_x_incompat">Android 10 har fjerna tilgang til utklippstavla for alle program. Programtillegget vert derfor slått av.</string>
   <string name="mpris_open_url">Hald fram avspeling her</string>
@@ -441,6 +451,8 @@
   <string name="enable_bluetooth">Bruk Bluetooth (beta)</string>
   <string name="receive_notifications_permission_explanation">Du må tillata varslingar for å kunna frå varslingar frå andre einingar</string>
   <string name="findmyphone_notifications_explanation">Varslingsløyvet trengst for at telefonen skal kunna ringja når appen er i bakgrunnsmodus</string>
+  <string name="findmyphone_camera_explanation">Kameraløyvet gjer det mogleg å blinka med lommelykta for å finna telefonen</string>
+  <string name="findmyphone_open_settings_for_camera">Gje kameraløyve i appinnstillingane for å kunna bruka lommelykta</string>
   <string name="mpris_keepwatching">Hald fram avspeling</string>
   <string name="mpris_keepwatching_settings_title">Hald fram avspeling</string>
   <string name="mpris_keepwatching_settings_summary">Vis ei stille varsling om framhald av medie­avspeling på eininga etter avspelingsstopp</string>
