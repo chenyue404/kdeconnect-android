@@ -592,6 +592,11 @@ public class LanLinkProvider extends BaseLinkProvider {
 
         broadcastUdpIdentityPacket(network);
         synchronized (mdnsDiscovery) {
+            if (TrustedNetworkHelper.isTrustedNetwork(context)) {
+                mdnsDiscovery.startAnnouncing(); // noop if already announcing
+            } else {
+                mdnsDiscovery.stopAnnouncing(); // noop if already stopped
+            }
             mdnsDiscovery.stopDiscovering();
             mdnsDiscovery.startDiscovering();
         }
