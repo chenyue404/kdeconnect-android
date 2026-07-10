@@ -72,14 +72,14 @@ class MdnsDiscovery {
     }
 
     fun stopAnnouncing() {
-        try {
-            if (registrationListener != null) {
+        if (registrationListener != null) {
+            try {
                 mNsdManager.unregisterService(registrationListener)
+            } catch (_: IllegalArgumentException) {
+                // Ignore "listener not registered" exception
             }
-        } catch (_: IllegalArgumentException) {
-            // Ignore "listener not registered" exception
+            registrationListener = null
         }
-        registrationListener = null
     }
 
     fun createRegistrationListener() = object : RegistrationListener {

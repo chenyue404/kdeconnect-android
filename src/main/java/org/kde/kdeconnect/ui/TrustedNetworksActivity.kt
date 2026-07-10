@@ -107,7 +107,7 @@ class TrustedNetworksActivity : BaseActivity<TrustedNetworkListBinding>() {
             addButton.visibility = View.GONE
             return
         }
-        val currentSSID = trustedNetworkHelper.currentSSID
+        val currentSSID = trustedNetworkHelper.getCurrentSSID()
         if (currentSSID != null && currentSSID !in trustedNetworks) {
             addButton.text = getString(R.string.add_trusted_network, currentSSID)
             addButton.setOnClickListener { v ->

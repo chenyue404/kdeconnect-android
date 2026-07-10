@@ -41,24 +41,23 @@ class TrustedNetworkHelper(private val context: Context) {
         get() = ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
 
     /** @return The current SSID or null if it's not available for any reason */
-    val currentSSID: String?
-        get() {
-            val wifiManager = ContextCompat.getSystemService(context.applicationContext, WifiManager::class.java) ?: return null
-            val wifiInfo = wifiManager.connectionInfo
-            if (wifiInfo.supplicantState != SupplicantState.COMPLETED) return null
-            val ssid = wifiInfo.ssid
-            return when {
-                ssid.equals(NOT_AVAILABLE_SSID_RESULT, ignoreCase = true) -> {
-                    Log.d("TrustedNetworkHelper", "Current SSID is unknown")
-                    null
-                }
-                ssid.isBlank() -> null
-                else -> ssid
+    fun getCurrentSSID(): String? {
+        val wifiManager = ContextCompat.getSystemService(context.applicationContext, WifiManager::class.java) ?: return null
+        val wifiInfo = wifiManager.connectionInfo
+        if (wifiInfo.supplicantState != SupplicantState.COMPLETED) return null
+        val ssid = wifiInfo.ssid
+        return when {
+            ssid.equals(NOT_AVAILABLE_SSID_RESULT, ignoreCase = true) -> {
+                Log.d("TrustedNetworkHelper", "Current SSID is unknown")
+                null
             }
+            ssid.isBlank() -> null
+            else -> ssid
         }
+    }
 
     val isTrustedNetwork: Boolean
-        get() = this.allNetworksAllowed || this.currentSSID in this.trustedNetworks
+        get() = this.allNetworksAllowed || this.getCurrentSSID() in this.trustedNetworks
 
     companion object {
         private const val KEY_CUSTOM_TRUSTED_NETWORKS = "trusted_network_preference"
